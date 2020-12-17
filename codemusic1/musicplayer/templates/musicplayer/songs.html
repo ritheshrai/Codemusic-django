@@ -1,0 +1,8 @@
+
+{% extends 'musicplayer\\test.html' %}
+{% block content %} 
+<h1> results  </h1>
+  {% for i in data%}
+<button type='button' class='btn btn-light full' onclick='djangosong("{{i.id}}");'><div class='center'><img src='{{i.image}}' alt='{{i.title}}' width=141 height=141><h1>{{i.title}}</h1><p>{{i.description}}</p></button></div><hr>
+{% endfor %}
+{% endblock %}
