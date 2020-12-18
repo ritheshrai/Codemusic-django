@@ -16,7 +16,8 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="signin" class="sign-in-form" method='POST'>{% csrf_token %}
+          <form action="signin" class="sign-in-form" method='POST'>
+            {% csrf_token %}
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
