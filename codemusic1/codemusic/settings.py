@@ -25,7 +25,7 @@ SECRET_KEY = 'm^kvubp_39j!i7^$!lqa*wg8&$$pd0-bpfps4b4k_@n^+*p^)t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -85,6 +85,7 @@ DATABASES = {
         'PORT':'3306',
     }
 }
+
 
 
 # Password validation
