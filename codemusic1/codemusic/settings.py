@@ -77,12 +77,8 @@ WSGI_APPLICATION = 'codemusic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'sql12379541',
-        'USER':'sql12379541',
-        'PASSWORD':'34vWBgdiGx',
-        'HOST':'sql12.freemysqlhosting.net',
-        'PORT':'3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
