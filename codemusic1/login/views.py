@@ -42,11 +42,11 @@ def register(request):
           pass2 = request.POST['pass2']
           if pass1==pass2:
                if User.objects.filter(username=username).exists():
-                    return render(request,'login\\login.html',{'result':'username taken'})
+                    return render(request,'login/login.html',{'result':'username taken'})
                     
                elif User.objects.filter(email=email).exists():
                
-                    return render(request,'login\\login.html', {'result':'email already exists'})
+                    return render(request,'login/login.html', {'result':'email already exists'})
                else:
                     user =User.objects.create_user(username= username,email=email,password=pass1,first_name=firstname,last_name=lastname)
                     user.save() 
@@ -64,10 +64,10 @@ def register(request):
                     user=User.objects.get(pk=ids)
                     x=music(user=user.id,pid=playlistcon.id)
                     x.save()
-                    return render(request,'login\login.html', {'result':'regesterred successful please login using your credentials'})
+                    return render(request,'login/login.html', {'result':'regesterred successful please login using your credentials'})
                    # return redirect('dashbord/')   
           else:
-                return render(request,'login\login.html', {'result':'passwords not matching'})
+                return render(request,'login/login.html', {'result':'passwords not matching'})
 
      else:
           return render(request,'login/index.html')
