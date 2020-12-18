@@ -9,7 +9,7 @@ from musicplayer.models import songs,music,playlist, playlistCON
 
 # Create your views here.
 def index(request):
-     return render(request ,'login\\index.html') 
+     return render(request ,'login/index.html') 
 def signin(request):
      if request.method =='POST':
           username=request.POST['username']
@@ -19,7 +19,7 @@ def signin(request):
                auth.login(request,user)
                return redirect('dashboard/')
           else:
-               return render(request,'login\\loginerror.html',{'result':'invalid credentials'})
+               return render(request,'login/loginerror.html',{'result':'invalid credentials'})
 
      else:
           redirect('/') 
