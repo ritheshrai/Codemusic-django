@@ -10,8 +10,10 @@ def home(request):
     return render(request ,'musicplayer/home.html') 
 def song(request):
     v1 =request.GET['search']
+    print("worked")
     response = requests.get('https://codemusic.vercel.app/search?query='+v1)
     geodata = response.json() 
+    print("fed")
     print(response)
     return HttpResponse( response, content_type='application/json')
     #return render(request,'musicplayer\\songs.html',{'data':geodata})
