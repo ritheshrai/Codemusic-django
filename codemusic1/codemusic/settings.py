@@ -82,7 +82,7 @@ DATABASES = {
         'USER':'sql12379541',
         'PASSWORD':'34vWBgdiGx',
         'HOST':'sql12.freemysqlhosting.net',
-        'PORT':'3306',
+        'PORT':'3307',
     }
 }
 
