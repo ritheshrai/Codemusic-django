@@ -5,7 +5,7 @@ function loadXMLDoc() {
 	var x = document.getElementById("searching").value;
   var xhttp = new XMLHttpRequest();
   var good=" ",god="";
-  xhttp.open("GET", "https://rithesh.pythonanywhere.com/dashboard/song?search="+x, true);
+  xhttp.open("GET", "https://codemusic.vercel.app/search?query="+x, true);
   xhttp.send();
   xhttp.onload = () => {
   	if(xhttp.status==200){
