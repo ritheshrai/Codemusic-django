@@ -50,20 +50,20 @@ def register(request):
                else:
                     user =User.objects.create_user(username= username,email=email,password=pass1,first_name=firstname,last_name=lastname)
                     user.save() 
-                    new =['1']
-                    n=list_to_str(new)
-                    playist=playlist(songList=n)
-                    playist.save()
-                    pid=playist.id
-                    k={}
-                    k['liked']=pid
-                    str1=str(k)
-                    playlistcon=playlistCON(playlistcollection=str1)
-                    playlistcon.save()
-                    ids=user.id
-                    user=User.objects.get(pk=ids)
-                    x=music(user=user.id,pid=playlistcon.id)
-                    x.save()
+                    # new =['1']
+                    # n=list_to_str(new)
+                    # playist=playlist(songList=n)
+                    # playist.save()
+                    # pid=playist.id
+                    # k={}
+                    # k['liked']=pid
+                    # str1=str(k)
+                    # playlistcon=playlistCON(playlistcollection=str1)
+                    # playlistcon.save()
+                    # ids=user.id
+                    # user=User.objects.get(pk=ids)
+                    # x=music(user=user.id,pid=playlistcon.id)
+                    # x.save()
                     return render(request,'login/login.html', {'result':'regesterred successful please login using your credentials'})
                    # return redirect('dashbord/')   
           else:

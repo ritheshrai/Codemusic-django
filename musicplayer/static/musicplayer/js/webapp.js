@@ -5,7 +5,7 @@ function loadXMLDoc() {
 	var x = document.getElementById("searching").value;
   var xhttp = new XMLHttpRequest();
   var good=" ",god="";
-  xhttp.open("GET", "https://codemusic.vercel.app/search?query="+x, true);
+  xhttp.open("GET", "https://codemusic-django.herokuapp.com/song?search="+x, true);
   xhttp.send();
   xhttp.onload = () => {
   	if(xhttp.status==200){
@@ -59,7 +59,7 @@ var x ;
 function djangosong(id)
 {
   var xhttp3 = new XMLHttpRequest();
-  xhttp3.open("GET", "https://rithesh.pythonanywhere.com/dashboard/api?id="+id, true);
+  xhttp3.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api?id="+id, true);
   xhttp3.send();
   xhttp3.onload = () => {
   	if(xhttp3.status==200){
