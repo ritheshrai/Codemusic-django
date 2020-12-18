@@ -7,7 +7,7 @@ import json
 import requests
 # Create your views here.
 def home(request):
-    return render(request ,'musicplayer\\home.html') 
+    return render(request ,'musicplayer/home.html') 
 def song(request):
     v1 =request.GET['search']
     response = requests.get('https://codemusic.vercel.app/search?query='+v1)
