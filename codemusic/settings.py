@@ -26,7 +26,7 @@ SECRET_KEY = 'm^kvubp_39j!i7^$!lqa*wgopij&$$pd0-bpfps4b4k_@n^+*p^)t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['codemusic-django.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['codemusic-django.herokuapp.com','127.0.0.1:8000']
 
 
 # Application definition
