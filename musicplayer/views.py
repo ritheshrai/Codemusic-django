@@ -54,9 +54,8 @@ def like(request):
             n.append(request.POST['songid'])
             playlist.songList=list_to_str(n)
             playist.save()
-
         else:
-            new =request.POST['songid']
+            new=request.POST['songid']
             n=list_to_str(new)
             playist=playlist(songList=n)
             playist.save()

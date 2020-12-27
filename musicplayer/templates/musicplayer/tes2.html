@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+  <title>CodePen Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.22.0/mediaelementplayer.min.css">
+<link  rel="stylesheet" type="text/css" href="{% static 'musicplayer/style/music.css' %}">
+</head>
+<body>
+	
+  
+	<h1>song title</h1>
+	<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+	<audio id="audio"class="audio location" controls="controls">
+		<source type="audio/mpeg" src="https://aac.saavncdn.com/965/cd4a9fb027c76d50a6d530e3ce6d47f1_160.mp4">
+	</audio>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.22.0/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.22.0/mediaelement-and-player.min.js"></script>
+  <script  src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-70f8d968-cdce-e033-379c-61502eddede7"></script>
+</body>
+
+</html>
+
+<script type="text/javascript" src="{% static 'musicplayer/js/player.js' %}"></script>
