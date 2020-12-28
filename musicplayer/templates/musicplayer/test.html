@@ -2,20 +2,18 @@
   <!DOCTYPE html>
   <html>
   <head>           
-    <div class="curseer"></div>
+      <div class="curseer"></div>
+
    
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<title>CodeMusic</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.22.0/mediaelementplayer.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'musicplayer/style/style.css' %}">
     <link  rel="stylesheet" type="text/css" href="{% static 'musicplayer/style/music.css' %}">
-
-    
-  
-
   </head>
-  <body id="good" >
+  <body id="good"  class="body" >
+    <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light color ">
       <a class="navbar-brand" href="#"><h1>CodeMusic</h1><h6>powerd by PePer</h6></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,7 +77,7 @@
 <audio id="audio"class="audio" controls="controls">
     <source type="audio/mpeg" src="https://aac.saavncdn.com/965/cd4a9fb027c76d50a6d530e3ce6d47f1_160.mp4">
   </audio></div>
-
+</div>
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.22.0/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.22.0/mediaelement-and-player.min.js"></script>
