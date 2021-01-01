@@ -35,13 +35,12 @@ def song(request):
     v1 =request.GET['search']
     response = requests.get('https://codemusic.vercel.app/search?query='+v1)
     geodata = response.json() 
-    print(response)
     return HttpResponse( response, content_type='application/json')
 def logout(request):
     auth.logout(request)
     return redirect('/')
 def like(request):
-    #userid,songid,
+    #userid,songid
     if request.method=='GET':
         if music.objects.filter(user=request.POST['userid']).exists():
             musics=music.objects.get(uid=request.POST['userid'])
@@ -54,6 +53,7 @@ def like(request):
                 n.append(request.POST['songid'])
                 playlist.songList=list_to_str(n)
                 playist.save()
+            return HttpResponse(response, content_type='application/json')
         else:
             new=request.POST['songid']
             n=list_to_str(new)
@@ -67,7 +67,7 @@ def like(request):
             playlistcon.save()
             x=music(user=request.POST['userid'],pid=playlistcon.id)
             x.save()
-        return HttpResponse(response, content_type='application/json')
+            return HttpResponse(response, content_type='application/json')
 def api(request):
     # data=songs.objects.get(musicID=request.GET['id'])
     # print(data.musicIMG)

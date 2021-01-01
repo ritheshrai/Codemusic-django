@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
      body{
         margin: 0;
@@ -22,11 +23,31 @@ body::-webkit-scrollbar {
     display: none;
 }
 .body{
-   background-image:url("https://source.unsplash.com/1000x1000/?Music,Neonn");
    background-repeat: no-repeat;
   background-position: bottom;
-  background-color: black;  
-  background-size: 100% 100%; 
+  background-color: white;  
+  background-size: 70%; 
+
+ }
+  .initialbagrounds{
+   position : absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+   z-index:-10;
+  filter:blur(2px);
+ }
+ .initialbaground{
+  position : absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  top: 0%;
+  width:100%;
+  height: auto;
+  z-index:-10;
+  filter:blur(2px);
 
  }
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -53,6 +74,7 @@ body {
   align-items: center; 
   z-index: 1; 
   overflow: hidden;
+  text-align: center;
 }
 .stop{
   position:fixed !important ;
@@ -84,6 +106,9 @@ body {
   width:10%;
   height:auto;
 
+}
+.my-sm-0 {
+ max-width:19%;
 }
 .color{
   position: fixed;

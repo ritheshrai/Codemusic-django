@@ -3,15 +3,24 @@
 {% block content %} 
 
 {% load static%}
-  <div class="bg-image">
+ 
 <div id="demo" class="center">
-<img 
-
-    src="{% static 'musicplayer/image/search.svg' %}" 
-    alt="Search"
-    height="87%"
-    width="100%" />
-  </div>
+<h2> It's really quiet here.....</h2>
+  
+  <div id="home" class="bg-image"></div></div>
+   <div class="codeplay stop">
+    <div class="slidercontainer">
+      <img id="posterimg">
+      <!--input  type="range" min="1" max="100" value="50" class="slider" id="myRange"!-->
+      <span id="songinfo"></span>
 </div>
+
+
+<audio id="audio"class="audio" controls="controls" loop="loop">
+    <source type="audio/mpeg" src="https://aac.saavncdn.com/965/cd4a9fb027c76d50a6d530e3ce6d47f1_160.mp4">
+  </audio></div>
+</div>
+  
+
 
 {% endblock %}
