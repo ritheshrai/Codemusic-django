@@ -87,3 +87,7 @@ def api(request):
             datas = serializers.serialize('json',songs.objects.all().filter(musicID__exact=data))
             return HttpResponse( datas, content_type='application/json')
     #return render(request,'musicplayer\\songs.html',{'data':geodata})
+def trending(request):
+    response = requests.get('https://www.jiosaavn.com/api.php?__call=webapi.get&token=LdbVc1Z5i9E_&type=playlist&p=1&n=50&includeMetaTags=0&ctx=wap6dot0&api_version=4&_format=json&_marker=0')
+    geodata = response.json() 
+    return HttpResponse( response, content_type='application/json')

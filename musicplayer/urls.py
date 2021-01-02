@@ -7,6 +7,7 @@ urlpatterns = [
     path('song',views.song,name='song'),
     path('api',views.api,name='api'),
     path('like',views.like,name='like'),
+    path('api/trending',views.trending,name='trending'),
     path('logout',views.logout,name='logout'),
     url(r'^favicon\.ico$',RedirectView.as_view(url='/static/musicplayer/image/PePer-ICON.png')),
 ]
