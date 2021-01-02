@@ -12,8 +12,8 @@ function loadXMLDoc() {
  // xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/song?search="+x, true);
  
  if(Boolean(x)){
- xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/song?search="+x, true);
-//xhttp.open("GET", "http://127.0.0.1:8000/dashboard/song?search="+x, true);
+// xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/song?search="+x, true);
+xhttp.open("GET", "http://127.0.0.1:8000/dashboard/song?search="+x, true);
   xhttp.send();
   xhttp.onload = () => {
   	if(xhttp.status==200){
@@ -73,8 +73,8 @@ function djangosong(id)
 { 
   cursong=songarray.indexOf(id);
   var xhttp3 = new XMLHttpRequest();
-   xhttp3.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api?id="+id, true);
-  //xhttp3.open("GET", "http://127.0.0.1:8000/dashboard/api?id="+id, true);
+  // xhttp3.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api?id="+id, true);
+  xhttp3.open("GET", "http://127.0.0.1:8000/dashboard/api?id="+id, true);
  xhttp3.send();
   xhttp3.onload = () => {
   	if(xhttp3.status==200){
@@ -134,8 +134,8 @@ function initiallaod() {
  // xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/song?search="+x, true);
  
  if(Boolean(x)){
-  xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/song?search="+x, true);
- //xhttp.open("GET", "http://127.0.0.1:8000/dashboard/song?search="+x, true);
+  //xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/song?search="+x, true);
+ xhttp.open("GET", "http://127.0.0.1:8000/dashboard/song?search="+x, true);
   xhttp.send();
   xhttp.onload = () => {
     if(xhttp.status==200){
@@ -160,8 +160,8 @@ function initiallaod() {
 function trending() {
   var xhttp = new XMLHttpRequest();
   
-  xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api/trending", true);
-// xhttp.open("GET", "http://127.0.0.1:8000/dashboard/api/trending", true);
+  //xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api/trending", true);
+ xhttp.open("GET", "http://127.0.0.1:8000/dashboard/api/trending", true);
   xhttp.send();
   xhttp.onload = () => {
     if(xhttp.status==200){

@@ -92,8 +92,12 @@ def api(request):
             return HttpResponse( datas, content_type='application/json')
     #return render(request,'musicplayer\\songs.html',{'data':geodata})
 def trending(request):
-    top_scores = (songs.objects.order_by('-fame').values_list('fame', flat=True))
-    top_records = (songs.objects.order_by('-fame').filter(fame__in=top_scores[:10]))
+    # top_scores = (songs.objects.order_by('-fame').values_list('fame', flat=True))
+    # print(type(top_scores))
+    # print(top_scores)
+    # top_records = (songs.objects.order_by('-fame').filter(fame__in=top_scores[:10]))
     #respons=serializers.serialize('json',songs.objects.filter(fame__gte=songs.objects.order_by('-fame')[:9]))
-    respons=serializers.serialize('json',top_records)
+    pubs = songs.objects.order_by('-fame')[:5]
+
+    respons=serializers.serialize('json',pubs)
     return HttpResponse(respons, content_type='application/json')
