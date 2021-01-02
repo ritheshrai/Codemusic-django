@@ -73,7 +73,7 @@ function djangosong(id)
 { 
   cursong=songarray.indexOf(id);
   var xhttp3 = new XMLHttpRequest();
-   http3.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api?id="+id, true);
+   xhttp3.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api?id="+id, true);
   //xhttp3.open("GET", "http://127.0.0.1:8000/dashboard/api?id="+id, true);
  xhttp3.send();
   xhttp3.onload = () => {
