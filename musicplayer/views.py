@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from musicplayer.models import songs
 from django.core import serializers
 from django.contrib.auth.models import auth
+from django.db.models import F
 import json
 import requests
 #funtionality
@@ -76,6 +77,7 @@ def api(request):
     sc=songs.objects.filter(musicID__exact=data)
     if(sc.count()>0):
         print("exist")
+        sc.update(fame=F('fame') + 1)
         datas = serializers.serialize('json',songs.objects.all().filter(musicID__exact=data))
         return HttpResponse( datas, content_type='application/json')
     else:
@@ -84,10 +86,14 @@ def api(request):
             songcred =response.json()
             obj=songs(musicID=songcred['id'], musicTitle=songcred['song'], musicDESC=songcred['primary_artists'],musicIMG=songcred['image'],musicUrl=songcred['media_url'])
             obj.save()
+            obj=songs.objects.filter(musicID=songcred['id'])
+            obj.update(fame=F('fame') + 1)
             datas = serializers.serialize('json',songs.objects.all().filter(musicID__exact=data))
             return HttpResponse( datas, content_type='application/json')
     #return render(request,'musicplayer\\songs.html',{'data':geodata})
 def trending(request):
-    response = requests.get('https://www.jiosaavn.com/api.php?__call=webapi.get&token=LdbVc1Z5i9E_&type=playlist&p=1&n=50&includeMetaTags=0&ctx=wap6dot0&api_version=4&_format=json&_marker=0')
-    geodata = response.json() 
-    return HttpResponse( response, content_type='application/json')
+    top_scores = (songs.objects.order_by('-fame').values_list('fame', flat=True).distinct())
+    top_records = (songs.objects.order_by('-fame').filter(fame__in=top_scores[:10]))
+    #respons=serializers.serialize('json',songs.objects.filter(fame__gte=songs.objects.order_by('-fame')[:9]))
+    respons=serializers.serialize('json',top_records)
+    return HttpResponse(respons, content_type='application/json')

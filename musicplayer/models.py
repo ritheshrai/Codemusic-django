@@ -10,6 +10,7 @@ class songs(models.Model):
     musicDESC = models.TextField()
     musicIMG = models.URLField(max_length=200)
     musicUrl = models.URLField(max_length=200)
+    fame=models.DecimalField(db_index=True,max_digits=5, decimal_places=2,default=0)
 class  playlistCON (models.Model):
     playlistcollection = models.TextField()
 class playlist(models.Model):

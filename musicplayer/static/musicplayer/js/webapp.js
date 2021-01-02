@@ -74,7 +74,7 @@ function djangosong(id)
   cursong=songarray.indexOf(id);
   var xhttp3 = new XMLHttpRequest();
    xhttp3.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api?id="+id, true);
- // xhttp3.open("GET", "http://127.0.0.1:8000/dashboard/api?id="+id, true);
+  //xhttp3.open("GET", "http://127.0.0.1:8000/dashboard/api?id="+id, true);
  xhttp3.send();
   xhttp3.onload = () => {
   	if(xhttp3.status==200){
@@ -161,7 +161,7 @@ function trending() {
   var xhttp = new XMLHttpRequest();
   
   xhttp.open("GET", "https://codemusic-django.herokuapp.com/dashboard/api/trending", true);
- // xhttp.open("GET", "http://127.0.0.1:8000/dashboard/api/trending", true);
+// xhttp.open("GET", "http://127.0.0.1:8000/dashboard/api/trending", true);
   xhttp.send();
   xhttp.onload = () => {
     if(xhttp.status==200){
@@ -171,10 +171,10 @@ if(k.Result=='false'){
       god ="<h1>No Results Found For now </h1>";}
       else
       { god="<h1>Trending Now</h1><hr><div class='grid'>"
-        len=k.list.length;
+        len=k.length;
 for (i = 0; i < len; i++) 
     {
-      good =`<button type='button' class='btn btn-light full' onclick='djangosong(\"${k.list[i].id}\")'><div><img src='${k.list[i].image}' alt='${k.list[i].title}' width=141 height=141><h2>${k.list[i].title}</h2><p>${k.list[i].subtitle}</p></div></button>`;
+      good =`<button type='button' class='btn btn-light full' onclick='djangosong(\"${k[i].fields.musicID}\")'><div><img src='${k[i].fields.musicIMG}' alt='${k[i].fields.musicTitle}' width=141 height=141><h2>${k[i].fields.musicTitle}</h2><p>${k[i].fields.musicDESC}</p></div></button>`;
       god=god+good;
       
     }
