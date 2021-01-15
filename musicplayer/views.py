@@ -97,7 +97,7 @@ def trending(request):
     # print(top_scores)
     # top_records = (songs.objects.order_by('-fame').filter(fame__in=top_scores[:10]))
     #respons=serializers.serialize('json',songs.objects.filter(fame__gte=songs.objects.order_by('-fame')[:9]))
-    pubs = songs.objects.order_by('-fame')[:5]
+    pubs = songs.objects.order_by('-fame')[:10]
 
     respons=serializers.serialize('json',pubs)
     return HttpResponse(respons, content_type='application/json')

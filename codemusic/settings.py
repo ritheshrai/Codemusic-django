@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'm^kvubp_39j!i7^$!lqa*wgopij&$$pd0-bpfps4b4k_@n^+*p^)t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['codemusic-django.herokuapp.com','localhost','*']
 

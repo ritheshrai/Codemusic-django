@@ -1,7 +1,7 @@
 $('audio').mediaelementplayer({
-	features: ['playpause','progress','current','tracks','fullscreen']
+	features: ['progress','current','tracks','fullscreen']
 });
-var voluume = document.getElementById("myRange");
+//var voluume = document.getElementById("myRange");
 // voluume.oninput = function() {
  // var audio=document.getElementById("audio");
 //}

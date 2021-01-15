@@ -12,7 +12,12 @@
     <div class="slidercontainer">
       <img id="posterimg">
       <!--input  type="range" min="1" max="100" value="50" class="slider" id="myRange"!-->
-      <span id="songinfo"></span>
+      <span id="songinfo"> </span>
+      <div class="nextprevbtn">
+      <button class="btn btn-default" onclick="prevsong();"><img class="nextprevbtn" src='{% static "musicplayer/image/prev.svg" %}'/>  </button>
+      <button class="btn btn-default" id="playbtn" onclick="playss();"><img class="nextprevbtn" src='{% static "musicplayer/image/play.svg" %}'/>  </button>
+      <button class="btn btn-default" style="display: none;"id="pausebtn" onclick="pauseSong();"><img class="nextprevbtn" src='{% static "musicplayer/image/pause.svg" %}'/>  </button>
+      <button class="btn btn-default" onclick="nextsong();"><img src='{% static "musicplayer/image/next.svg" %}'/></button></div>
 </div>
 
 
