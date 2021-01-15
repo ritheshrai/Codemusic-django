@@ -147,6 +147,10 @@ padding-top:25%;
 .grid  h1{
  font-size:  1.5em 
 }
+.nextprevbtn{
+  float: left;
+}
+
 
 }
 @media screen and (max-width:480px){
@@ -155,8 +159,8 @@ padding-top: 48%;
 }
 #posterimg {
 float: left;
-width:20%;
-height:100%;
+widows: 60%;
+height:auto;
 }  
 .error{
 padding-top: 48%;
@@ -183,9 +187,8 @@ box-shadow: 0 0 21px 0px rgba(0,0,0,0.3);
 
 .nextprevbtn{
 display: inline-flex;
-align-items: center;
 transition-duration: 0.2s;
-width: 10%;
+
 }
 .nextprevbtn button img{
   width: 50px;
