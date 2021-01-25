@@ -9,7 +9,7 @@
 This Website is written in **Django** framework and this website is in its early days of Alpha testing so this site is pretty buggy and featurless
 please Try my website and give any new ideas to improve this to make it an open-source coders community music website with comunity vibes
 <br>
-> :dash: This project is hosted on heroku as [Codemusic-django](https://github.com/ritheshrai/Codemusic-django)
+> :dash: This project is hosted on heroku as [Codemusic-django](https://codemusic-django.herokuapp.com/)
 
 
 >Issues are most welcomed :relaxed:
