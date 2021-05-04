@@ -228,5 +228,5 @@ for (const [action, handler] of actionHandlers) {
   }
 }
 x.addEventListener('ended', (event) => {
-  nexttrack();
+ nextsong();
 });
